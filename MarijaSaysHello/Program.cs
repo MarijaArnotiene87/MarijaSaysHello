@@ -2,3 +2,7 @@
 var name = Console.ReadLine();
 Console.WriteLine($"Nice to meet you {name} ");
 Console.WriteLine("Marija");
+
+Console.WriteLine("What's the name of company where you want to work?: ");
+var companyName = Console.ReadLine();
+

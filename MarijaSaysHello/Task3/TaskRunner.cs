@@ -6,14 +6,14 @@ namespace Marija_SaysHello.Task3
     {
         public static void Task3Runner()
         {
-            //Number1();
-            //Number2();
-            //Number3();
-            //Number4();
-            //Number5();
-            //Number6();
-            //Number7();
-            //Number8();
+            Number1();
+            Number2();
+            Number3();
+            Number4();
+            Number5();
+            Number6();
+            Number7();
+            Number8();
             Number9();
         }
 
@@ -178,11 +178,7 @@ namespace Marija_SaysHello.Task3
         }
 
         public static void Number9()
-        {
-            //Попросите пользователя ввести два числа, а также арифметическое действие (+, -, *, /).
-            //В зависимости от символа, который будет введен, выполните математические действия над числами, которые ввел пользователь.
-            //Для проверки данных используйте оператор switch case.
-
+        { 
             Console.Write("Please enter first number: ");
             string inputValue = Console.ReadLine();
 

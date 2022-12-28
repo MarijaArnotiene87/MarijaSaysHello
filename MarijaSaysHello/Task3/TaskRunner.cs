@@ -13,7 +13,8 @@ namespace Marija_SaysHello.Task3
             //Number5();
             //Number6();
             //Number7();
-            Number8();
+            //Number8();
+            Number9();
         }
 
         public static void Number1()
@@ -175,5 +176,60 @@ namespace Marija_SaysHello.Task3
                 Console.WriteLine("Not working");
             }
         }
+
+        public static void Number9()
+        {
+            //Попросите пользователя ввести два числа, а также арифметическое действие (+, -, *, /).
+            //В зависимости от символа, который будет введен, выполните математические действия над числами, которые ввел пользователь.
+            //Для проверки данных используйте оператор switch case.
+
+            Console.Write("Please enter first number: ");
+            string inputValue = Console.ReadLine();
+
+            float firstNumber;
+
+            bool result = float.TryParse(inputValue, out firstNumber);
+            if (!result)
+            {
+                Console.WriteLine("First number could not be parsed");
+                return;
+            }
+
+            Console.Write("Please enter second number: ");
+            string inputValue2 = Console.ReadLine();
+
+            float secondNumber;
+
+            result = float.TryParse(inputValue2, out secondNumber);
+            if (!result)
+            {
+                Console.WriteLine("Second number could not be parsed");
+                return;
+            }
+
+            Console.Write("Please enter an arithmetic operation (+, -, *, /): ");
+            string inputOperation = Console.ReadLine();
+
+            switch (inputOperation)
+            {
+                case "+":
+                    Console.WriteLine($"Two numbers added: {firstNumber + secondNumber}");
+                    break;
+                case "-":
+                    Console.WriteLine($"Two numbers substracted: {firstNumber - secondNumber}");
+                    break;
+                case "*":
+                    Console.WriteLine($"Two numbers multiplied: {firstNumber * secondNumber}");
+                    break;
+                case "/":
+                    Console.WriteLine($"Two numbers divided: {firstNumber / secondNumber}");
+                    break;
+                default:
+                    Console.WriteLine("No such operation");
+                    break;
+            }
+
+        }
+
     }
 }

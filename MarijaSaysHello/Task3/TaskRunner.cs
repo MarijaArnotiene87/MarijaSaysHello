@@ -9,7 +9,8 @@ namespace Marija_SaysHello.Task3
             //Number1();
             //Number2();
             //Number3();
-            Number4();
+            //Number4();
+            Number5();
         }
 
         public static void Number1()
@@ -63,13 +64,55 @@ namespace Marija_SaysHello.Task3
 
         public static void Number4()
         {
-            //-34, 4, 'Hello', 'R', 23.093433222, 40000, true, 0
             sbyte bit1 = -34;
             byte bit2 = 4;
             string a = "Hello";
             char b = 'R';
             double c = 23.093433222;
-            Console.WriteLine(c);
+            ushort d = 40000;
+            bool isTrue = true;
+            byte e = 0;
+        }
+
+        public static void Number5()
+        {
+            //short, ulong, char, double
+            Console.Write("Please enter value: ");
+            string inputValue = Console.ReadLine();
+            short s;
+            ulong u;
+            char ch;
+            double d;
+
+            bool resultShort = short.TryParse(inputValue, out s);
+            if (resultShort)
+            {
+                Console.WriteLine($"{inputValue} value is short");
+                return;
+            }
+
+            bool resultUlong = ulong.TryParse(inputValue, out u);
+            if (resultUlong)
+            {
+                Console.WriteLine($"{inputValue} value is ulong");
+                return;
+            }
+
+            bool resultChar = char.TryParse(inputValue, out ch);
+            if (resultChar)
+            {
+                Console.WriteLine($"{inputValue} value is char");
+                return;
+            }
+
+            bool resultDouble = double.TryParse(inputValue, out d);
+            if (resultDouble)
+            {
+                Console.WriteLine($"{inputValue} value is double");
+                return;
+            }
+
+            Console.WriteLine($"{inputValue} is not short, ulong, char or double");
         }
     }
 }

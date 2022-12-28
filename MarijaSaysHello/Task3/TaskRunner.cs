@@ -10,7 +10,8 @@ namespace Marija_SaysHello.Task3
             //Number2();
             //Number3();
             //Number4();
-            Number5();
+            //Number5();
+            Number6();
         }
 
         public static void Number1()
@@ -113,6 +114,15 @@ namespace Marija_SaysHello.Task3
             }
 
             Console.WriteLine($"{inputValue} is not short, ulong, char or double");
+        }
+
+        public static void Number6() 
+        {
+            float a = -5;
+            a *= 7;
+            a -= 1;
+
+            Console.WriteLine($"value is: {a}");
         }
     }
 }

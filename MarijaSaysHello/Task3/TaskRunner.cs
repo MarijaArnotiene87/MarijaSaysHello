@@ -1,12 +1,15 @@
-﻿namespace Marija_SaysHello.Task3
+﻿using System.Globalization;
+
+namespace Marija_SaysHello.Task3
 {
     public class TaskRunner
     {
         public static void Task3Runner()
         {
-            Number1();
-            Number2();
-            Number3();
+            //Number1();
+            //Number2();
+            //Number3();
+            //Number4();
         }
 
         public static void Number1()
@@ -20,6 +23,7 @@
         public static void Number2()
         {
             //uznat na schiot mesiacev i dnej v godu
+            //uznat nuzhno li sdelat proverku esli vvediosh ne chetiriohznachnoe chislo
             Console.Write("Hi! Please enter the four-digit number:  ");
 
             string userInput = Console.ReadLine();
@@ -46,6 +50,18 @@
         }
 
         public static void Number3()
+        {
+            Console.Write("Please enter any number: ");
+            string number = Console.ReadLine(); // nuzno li kak to sdelat chtoby menialas zapiataja na tochku
+
+            float n = float.Parse(number, CultureInfo.InvariantCulture.NumberFormat);
+
+            float value = n + n * 2;
+
+            Console.WriteLine($"The result (n + n * 2): {value}");
+        }
+
+        public static void Number4()
         {
 
         }

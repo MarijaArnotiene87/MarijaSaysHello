@@ -9,7 +9,7 @@ namespace Marija_SaysHello.Task3
             //Number1();
             //Number2();
             //Number3();
-            //Number4();
+            Number4();
         }
 
         public static void Number1()
@@ -63,7 +63,13 @@ namespace Marija_SaysHello.Task3
 
         public static void Number4()
         {
-
+            //-34, 4, 'Hello', 'R', 23.093433222, 40000, true, 0
+            sbyte bit1 = -34;
+            byte bit2 = 4;
+            string a = "Hello";
+            char b = 'R';
+            double c = 23.093433222;
+            Console.WriteLine(c);
         }
     }
 }

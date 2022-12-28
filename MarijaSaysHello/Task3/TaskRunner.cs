@@ -11,7 +11,8 @@ namespace Marija_SaysHello.Task3
             //Number3();
             //Number4();
             //Number5();
-            Number6();
+            //Number6();
+            Number7();
         }
 
         public static void Number1()
@@ -116,13 +117,34 @@ namespace Marija_SaysHello.Task3
             Console.WriteLine($"{inputValue} is not short, ulong, char or double");
         }
 
-        public static void Number6() 
+        public static void Number6()
         {
             float a = -5;
             a *= 7;
             a -= 1;
 
             Console.WriteLine($"value is: {a}");
+        }
+
+        public static void Number7()
+        {
+            Console.Write("Please enter value: ");
+            string inputValue = Console.ReadLine();
+            int num1;
+
+            bool result = Int32.TryParse(inputValue, out num1);
+            if (!result)
+            {
+                Console.WriteLine("Could not be parsed.");
+                return;
+            }
+
+            if (num1 % 2 == 0)
+            {
+                Console.WriteLine("Number is even");
+                return;
+            }
+            Console.WriteLine("Number is odd");
         }
     }
 }

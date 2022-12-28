@@ -12,7 +12,8 @@ namespace Marija_SaysHello.Task3
             //Number4();
             //Number5();
             //Number6();
-            Number7();
+            //Number7();
+            Number8();
         }
 
         public static void Number1()
@@ -145,6 +146,34 @@ namespace Marija_SaysHello.Task3
                 return;
             }
             Console.WriteLine("Number is odd");
+        }
+
+        public static void Number8()
+        {
+            Console.Write("Please enter value: ");
+            string inputValue = Console.ReadLine();
+
+            int A;
+
+            bool result = Int32.TryParse(inputValue, out A);
+            if (!result)
+            {
+                Console.WriteLine("Could not be parsed.");
+                return;
+            }
+
+            if (A < 50 && A != 37 && A >= 32)
+            {
+                Console.WriteLine("Working");
+            }
+            else if (A == 0 || A == 15)
+            {
+                Console.WriteLine("Working");
+            }
+            else
+            {
+                Console.WriteLine("Not working");
+            }
         }
     }
 }

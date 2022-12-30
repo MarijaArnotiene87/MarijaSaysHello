@@ -35,8 +35,9 @@
         {
             const int x = 3;
             int i = 1;
+            int numberOfOperation = 9;
 
-            while (i <= 9)
+            while (i <= numberOfOperation)
             {
                 Console.WriteLine($"{i} x {x} = {i * x}");
                 i++;

@@ -6,7 +6,8 @@
         {
             //Exercise1();
             //Exercise2();
-            Exercise3();
+            //Exercise3();
+            Exercise4();
         }
 
         public static void Exercise1()
@@ -56,7 +57,22 @@
             }
             Console.WriteLine($"{result}");
         }
-    }
 
+        public static void Exercise4()
+        {
+            int number = 2048;
+            int dividerValue = 2;
+            int counter = 0;
+            int minimumNumber = 10;
+
+            while (number > minimumNumber)
+            {
+                number = number / dividerValue;
+                counter++;
+            }
+            Console.WriteLine($"Number of division operation: {counter}");
+        }
+
+    }
 }
 

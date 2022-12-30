@@ -7,7 +7,8 @@
             //Exercise1();
             //Exercise2();
             //Exercise3();
-            Exercise4();
+            //Exercise4();
+            Exercise5();
         }
 
         public static void Exercise1()
@@ -71,6 +72,23 @@
                 counter++;
             }
             Console.WriteLine($"Number of division operation: {counter}");
+        }
+
+        public static void Exercise5()
+        {
+            string[] wordList = new[] { "Hi", "Welcome", "Goodbye", "Hello", "How are you?" };
+
+            foreach (string word in wordList)
+            {
+                if (word == "Hello")
+                {
+                    Console.WriteLine("Labas!");
+                }
+                else
+                {
+                    Console.WriteLine(word);
+                }
+            }
         }
 
     }

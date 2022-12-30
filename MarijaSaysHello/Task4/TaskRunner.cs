@@ -4,7 +4,8 @@
     {
         public static void Task4Runner()
         {
-            Exercise1();
+            //Exercise1();
+            Exercise2();
         }
 
         public static void Exercise1()
@@ -28,6 +29,18 @@
                 sumOfnumbers = sumOfnumbers + i;
             }
             Console.WriteLine($"{sumOfnumbers}");
+        }
+
+        public static void Exercise2()
+        {
+            const int x = 3;
+            int i = 1;
+
+            while (i <= 9)
+            {
+                Console.WriteLine($"{i} x {x} = {i * x}");
+                i++;
+            }
         }
 
     }

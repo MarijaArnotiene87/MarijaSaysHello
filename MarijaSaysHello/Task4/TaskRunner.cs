@@ -50,11 +50,9 @@
             int[] numbers = new[] { 3, 5, 9, 8, 15 };
 
             int result = numbers[0];
-            for (int i = 0; i != numbers.Length; i++)
+            for (int i = 1; i != numbers.Length; i++)
             {
-                if (i == numbers.Length - 1)
-                    break;
-                result = result * numbers[i + 1];
+                result = result * numbers[i];
             }
             Console.WriteLine($"{result}");
         }

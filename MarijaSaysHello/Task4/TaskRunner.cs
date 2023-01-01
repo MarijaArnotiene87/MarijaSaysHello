@@ -10,7 +10,8 @@
             //Exercise4();
             //Exercise5();
             //Exercise6();
-            Exercise7();
+            //Exercise7();
+            Exercise8();
         }
 
         public static void Exercise1()
@@ -124,6 +125,29 @@
                 }
             }
             Console.WriteLine($"Sum of min index {minIndex} and max index {maxIndex} equals {minIndex + maxIndex}");
+        }
+
+        public static void Exercise8()
+        {
+            int[] numbers = new int[] { 8, 5, 9, 52, 32, 47, 15 };
+
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                for (int j = i + 1; j < numbers.Length; j++)
+                {
+                    if (numbers[i] > numbers[j])
+                    {
+                        int value;
+                        value = numbers[i];
+                        numbers[i] = numbers[j];
+                        numbers[j] = value;
+                    }
+                }
+            }
+            foreach (int value in numbers)
+            {
+                Console.WriteLine(value);
+            }
         }
 
     }

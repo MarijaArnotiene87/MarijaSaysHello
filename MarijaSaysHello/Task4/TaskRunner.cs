@@ -13,7 +13,8 @@
             //Exercise7();
             //Exercise8();
             //Exercise9();
-            Exercise10();
+            //Exercise10();
+            Exercise11();
         }
 
         public static void Exercise1()
@@ -179,6 +180,70 @@
                     Console.Write(numbers[i, j] + " ");
                 }
                 Console.WriteLine();
+            }
+        }
+
+        public static void Exercise11()
+        {
+            //Create an array of numbers: int[] array = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int[] array = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            //1.Add the number 11 to the end of the array
+            int[] newarray = new int[array.Length + 1];
+            for (int i = 0; i < newarray.Length - 1; i++)
+            {
+                newarray[i] = array[i];
+            }
+            newarray[newarray.Length - 1] = 11;
+            array = newarray;
+
+            //2.Add the number -1 to the beginning of the array
+            newarray = new int[array.Length + 1];
+            newarray[0] = -1;
+            for (int i = 1; i < newarray.Length; i++)
+            {
+                newarray[i] = array[i - 1];
+            }
+            array = newarray;
+
+            //3.Add number 12 to position 4
+            newarray = new int[array.Length + 1];
+            int arrayIndex = 0;
+            for (int i = 0; i < newarray.Length; i++)
+            {
+                if (i == 4)
+                {
+                    newarray[i] = 12;
+                    arrayIndex--;
+                }
+                else
+                {
+                    newarray[i] = array[arrayIndex];
+                }
+                arrayIndex++;
+            }
+            array = newarray;
+
+            //4.Remove the first element of the array
+            newarray = new int[array.Length - 1];
+            for (int i = 0; i < newarray.Length; i++)
+            {
+                newarray[i] = array[i + 1];
+            }
+            array = newarray;
+
+            //5.Creating an array from two arrays: the first array is array, the second is int[] array2 = { 100, 200, 300 }.
+            //The resulting array must contain both array and array2 numbers
+            int[] array2 = { 100, 200, 300 };
+            int[] resultArray = new int[array.Length + array2.Length];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                resultArray[i] = array[i];
+            }
+            for (int i = 0; i < array2.Length; i++)
+            {
+                resultArray[i + array.Length] = array2[i];
             }
         }
 

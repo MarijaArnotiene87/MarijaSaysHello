@@ -9,7 +9,8 @@
             //Exercise3();
             //Exercise4();
             //Exercise5();
-            Exercise6();
+            //Exercise6();
+            Exercise7();
         }
 
         public static void Exercise1()
@@ -96,7 +97,33 @@
         {
             int[] numbers = new int[] { 8, 9, 52, 32, 47, 15 };
 
-            Console.WriteLine(numbers[0] + numbers[numbers.Length - 1]);
+            Console.WriteLine($"Sum of first element {numbers[0]} and last element {numbers[numbers.Length - 1]} equals {numbers[0] + numbers[numbers.Length - 1]}");
+        }
+
+        public static void Exercise7()
+        {
+            int[] numbers = new int[] { 8, 5, 9, 52, 32, 47, 15 };
+
+            int minValue = numbers[0];
+            int maxValue = numbers[0];
+            int minIndex = 0;
+            int maxIndex = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (minValue > numbers[i])
+                {
+                    minValue = numbers[i];
+                    minIndex = i;
+                }
+
+                if (maxValue < numbers[i])
+                {
+                    maxValue = numbers[i];
+                    maxIndex = i;
+                }
+            }
+            Console.WriteLine($"Sum of min index {minIndex} and max index {maxIndex} equals {minIndex + maxIndex}");
         }
 
     }

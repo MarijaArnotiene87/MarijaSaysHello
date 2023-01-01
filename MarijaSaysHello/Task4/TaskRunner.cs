@@ -4,16 +4,16 @@
     {
         public static void Task4Runner()
         {
-            //Exercise1();
-            //Exercise2();
-            //Exercise3();
-            //Exercise4();
-            //Exercise5();
-            //Exercise6();
-            //Exercise7();
-            //Exercise8();
-            //Exercise9();
-            //Exercise10();
+            Exercise1();
+            Exercise2();
+            Exercise3();
+            Exercise4();
+            Exercise5();
+            Exercise6();
+            Exercise7();
+            Exercise8();
+            Exercise9();
+            Exercise10();
             Exercise11();
         }
 

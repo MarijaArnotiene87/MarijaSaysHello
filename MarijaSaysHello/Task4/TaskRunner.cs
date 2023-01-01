@@ -8,7 +8,8 @@
             //Exercise2();
             //Exercise3();
             //Exercise4();
-            Exercise5();
+            //Exercise5();
+            Exercise6();
         }
 
         public static void Exercise1()
@@ -89,6 +90,13 @@
                     Console.WriteLine(word);
                 }
             }
+        }
+
+        public static void Exercise6()
+        {
+            int[] numbers = new int[] { 8, 9, 52, 32, 47, 15 };
+
+            Console.WriteLine(numbers[0] + numbers[numbers.Length - 1]);
         }
 
     }

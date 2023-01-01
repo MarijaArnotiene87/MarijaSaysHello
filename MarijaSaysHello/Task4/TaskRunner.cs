@@ -12,7 +12,8 @@
             //Exercise6();
             //Exercise7();
             //Exercise8();
-            Exercise9();
+            //Exercise9();
+            Exercise10();
         }
 
         public static void Exercise1()
@@ -162,6 +163,20 @@
                 {
                     Console.WriteLine($"{i} x {x} = {i * x}");
                     i++;
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void Exercise10()
+        {
+            int[,] numbers = new int[3, 3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+
+            for (int i = 0; i < numbers.GetLength(0); i++)
+            {
+                for (int j = 0; j < numbers.GetLength(1); j++)
+                {
+                    Console.Write(numbers[i, j] + " ");
                 }
                 Console.WriteLine();
             }

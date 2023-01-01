@@ -11,7 +11,8 @@
             //Exercise5();
             //Exercise6();
             //Exercise7();
-            Exercise8();
+            //Exercise8();
+            Exercise9();
         }
 
         public static void Exercise1()
@@ -147,6 +148,22 @@
             foreach (int value in numbers)
             {
                 Console.WriteLine(value);
+            }
+        }
+
+        public static void Exercise9()
+        {
+            int numberOfOperation = 10;
+
+            for (int x = 1; x <= numberOfOperation; x++)
+            {
+                int i = 1;
+                while (i <= numberOfOperation)
+                {
+                    Console.WriteLine($"{i} x {x} = {i * x}");
+                    i++;
+                }
+                Console.WriteLine();
             }
         }
 

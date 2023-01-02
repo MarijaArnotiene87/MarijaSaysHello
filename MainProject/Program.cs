@@ -1,10 +1,10 @@
-﻿namespace Marija_SaysHello
+﻿namespace MainProject
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Task3.TaskRunner.Task3Runner();
+            Console.WriteLine("Hello, World!");
         }
     }
 }

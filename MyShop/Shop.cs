@@ -2,9 +2,17 @@
 {
     public class Shop
     {
-        public static void ShopEmployees()
-        {
+        public string shopName;
+        public int openingYear;
 
+        public string GetShopInfo()
+        {
+            return $"Shop {shopName} was opened in {openingYear}";
+        }
+
+        public void PrintShopName()
+        {
+            Console.WriteLine($"Shop name is {shopName}");
         }
     }
 }

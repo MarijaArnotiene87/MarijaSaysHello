@@ -32,12 +32,13 @@
                 return;
             }
 
-            int sumOfnumbers = 0;
+            int sumOfNumbers = 0;
             for (int i = 0; i <= userInputValue; i++)
             {
-                sumOfnumbers = sumOfnumbers + i;
+                sumOfNumbers += i;
             }
-            Console.WriteLine($"{sumOfnumbers}");
+
+            Console.WriteLine($"{sumOfNumbers}");
         }
 
         public static void Exercise2()
@@ -55,13 +56,14 @@
 
         public static void Exercise3()
         {
-            int[] numbers = new[] { 3, 5, 9, 8, 15 };
+            int[] numbers = { 3, 5, 9, 8, 15 };
 
             int result = numbers[0];
             for (int i = 1; i != numbers.Length; i++)
             {
-                result = result * numbers[i];
+                result *= numbers[i];
             }
+
             Console.WriteLine($"{result}");
         }
 
@@ -74,21 +76,23 @@
 
             while (number > minimumNumber)
             {
-                number = number / dividerValue;
+                number /= dividerValue;
                 counter++;
             }
+
             Console.WriteLine($"Number of division operation: {counter}");
         }
 
         public static void Exercise5()
         {
-            string[] wordList = new[] { "Hi", "Welcome", "Goodbye", "Hello", "How are you?" };
+            string[] wordList = { "Hi", "Welcome", "Goodbye", "Hello", "How are you?" };
 
             foreach (string word in wordList)
             {
                 if (word == "Hello")
                 {
                     Console.WriteLine("Labas!");
+                    break;
                 }
                 else
                 {
@@ -99,14 +103,14 @@
 
         public static void Exercise6()
         {
-            int[] numbers = new int[] { 8, 9, 52, 32, 47, 15 };
+            int[] numbers = { 8, 9, 52, 32, 47, 15 };
 
             Console.WriteLine($"Sum of first element {numbers[0]} and last element {numbers[numbers.Length - 1]} equals {numbers[0] + numbers[numbers.Length - 1]}");
         }
 
         public static void Exercise7()
         {
-            int[] numbers = new int[] { 8, 5, 9, 52, 32, 47, 15 };
+            int[] numbers = { 8, 5, 9, 52, 32, 47, 15 };
 
             int minValue = numbers[0];
             int maxValue = numbers[0];
@@ -127,12 +131,13 @@
                     maxIndex = i;
                 }
             }
+
             Console.WriteLine($"Sum of min index {minIndex} and max index {maxIndex} equals {minIndex + maxIndex}");
         }
 
         public static void Exercise8()
         {
-            int[] numbers = new int[] { 8, 5, 9, 52, 32, 47, 15 };
+            int[] numbers = { 8, 5, 9, 52, 32, 47, 15 };
 
             for (int i = 0; i < numbers.Length - 1; i++)
             {
@@ -147,6 +152,7 @@
                     }
                 }
             }
+
             foreach (int value in numbers)
             {
                 Console.WriteLine(value);
@@ -165,13 +171,14 @@
                     Console.WriteLine($"{i} x {x} = {i * x}");
                     i++;
                 }
+
                 Console.WriteLine();
             }
         }
 
         public static void Exercise10()
         {
-            int[,] numbers = new int[3, 3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+            int[,] numbers = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
@@ -179,6 +186,7 @@
                 {
                     Console.Write(numbers[i, j] + " ");
                 }
+
                 Console.WriteLine();
             }
         }
@@ -189,48 +197,53 @@
             int[] array = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
             //1.Add the number 11 to the end of the array
-            int[] newarray = new int[array.Length + 1];
-            for (int i = 0; i < newarray.Length - 1; i++)
+            int[] newArray = new int[array.Length + 1];
+            for (int i = 0; i < newArray.Length - 1; i++)
             {
-                newarray[i] = array[i];
+                newArray[i] = array[i];
             }
-            newarray[newarray.Length - 1] = 11;
-            array = newarray;
+
+            newArray[newArray.Length - 1] = 11;
+            array = newArray;
 
             //2.Add the number -1 to the beginning of the array
-            newarray = new int[array.Length + 1];
-            newarray[0] = -1;
-            for (int i = 1; i < newarray.Length; i++)
+            newArray = new int[array.Length + 1];
+            newArray[0] = -1;
+            for (int i = 1; i < newArray.Length; i++)
             {
-                newarray[i] = array[i - 1];
+                newArray[i] = array[i - 1];
             }
-            array = newarray;
+
+            array = newArray;
 
             //3.Add number 12 to position 4
-            newarray = new int[array.Length + 1];
+            newArray = new int[array.Length + 1];
             int arrayIndex = 0;
-            for (int i = 0; i < newarray.Length; i++)
+            for (int i = 0; i < newArray.Length; i++)
             {
-                if (i == 4)
+                if (i == 3)
                 {
-                    newarray[i] = 12;
+                    newArray[i] = 12;
                     arrayIndex--;
                 }
                 else
                 {
-                    newarray[i] = array[arrayIndex];
+                    newArray[i] = array[arrayIndex];
                 }
+
                 arrayIndex++;
             }
-            array = newarray;
+
+            array = newArray;
 
             //4.Remove the first element of the array
-            newarray = new int[array.Length - 1];
-            for (int i = 0; i < newarray.Length; i++)
+            newArray = new int[array.Length - 1];
+            for (int i = 0; i < newArray.Length; i++)
             {
-                newarray[i] = array[i + 1];
+                newArray[i] = array[i + 1];
             }
-            array = newarray;
+
+            array = newArray;
 
             //5.Creating an array from two arrays: the first array is array, the second is int[] array2 = { 100, 200, 300 }.
             //The resulting array must contain both array and array2 numbers
@@ -241,6 +254,7 @@
             {
                 resultArray[i] = array[i];
             }
+
             for (int i = 0; i < array2.Length; i++)
             {
                 resultArray[i + array.Length] = array2[i];

@@ -1,9 +1,4 @@
 ﻿using MyShopLibrary;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MainProject
 {
@@ -15,11 +10,30 @@ namespace MainProject
 
         public string name;
         public int foundationYear;
-        public Shop store;
+        public Shop[] shops;
 
         public Company()
         {
+        }
 
+        public Company(string name, int year)
+        {
+            this.name = name;
+            this.foundationYear = year;
+        }
+
+        public Company(string name, int year, Shop shop)
+        {
+            this.name = name;
+            this.foundationYear = year;
+            this.shops = new[] { shop };
+        }
+
+        public Company(string name, int year, Shop[] shops)
+        {
+            this.name = name;
+            this.foundationYear = year;
+            this.shops = shops;
         }
 
         public string GetCompanyInfo()
@@ -30,6 +44,43 @@ namespace MainProject
         public void PrintCompanyName()
         {
             Console.WriteLine($"Company name is {name}");
+        }
+
+        public int GetShopCount()
+        {
+            return shops.Length;
+        }
+
+        public void AddShop(Shop shop)
+        {
+            Array.Resize(ref shops, shops.Length + 1);
+            shops[shops.Length - 1] = shop;
+        }
+
+        public void AddShop(string shopName, int year)
+        {
+            Shop shop = new Shop(shopName, year);
+            Array.Resize(ref shops, shops.Length + 1);
+            shops[shops.Length - 1] = shop;
+        }
+
+        public void DisplayAllShops()
+        {
+            foreach (Shop shop in shops)
+            {
+                shop.PrintShopName();
+            }
+        }
+
+        public void DisplayCompanyEmployeesCount()
+        {
+            int companyEmployeeCount = 0;
+
+            foreach (Shop shop in shops)
+            {
+                companyEmployeeCount += shop.employeeCount;
+            }
+            Console.WriteLine($"Count of shops employees: {companyEmployeeCount}");
         }
     }
 }

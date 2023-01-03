@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarijaSaysHello", "MarijaSa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyShopLibrary", "MyShop\MyShopLibrary.csproj", "{054FACA8-417A-463D-BF34-17B0F1DD4D65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainProject", "MainProject\MainProject.csproj", "{EC1EE91E-D0B9-4F5F-8C58-17DD76CA2070}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainProject", "MainProject\MainProject.csproj", "{EC1EE91E-D0B9-4F5F-8C58-17DD76CA2070}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task5", "Task5", "{358BE211-53A6-470C-A8DC-E01466BE1DDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{054FACA8-417A-463D-BF34-17B0F1DD4D65} = {358BE211-53A6-470C-A8DC-E01466BE1DDD}
+		{EC1EE91E-D0B9-4F5F-8C58-17DD76CA2070} = {358BE211-53A6-470C-A8DC-E01466BE1DDD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11E3BA2A-99B0-4641-AE68-F7C7CFB0FE6C}

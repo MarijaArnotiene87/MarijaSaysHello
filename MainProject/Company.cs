@@ -32,20 +32,11 @@ namespace MainProject
             this.shops = shops;
         }
 
-        public string GetCompanyInfo()
-        {
-            return $"Company {name} was established in {foundationYear}";
-        }
+        public string GetCompanyInfo() => $"Company {name} was established in {foundationYear}";
 
-        public void PrintCompanyName()
-        {
-            Console.WriteLine($"Company name is {name}");
-        }
+        public void PrintCompanyName() => Console.WriteLine($"Company name is {name}");
 
-        public int GetShopCount()
-        {
-            return shops.Length;
-        }
+        public int GetShopCount() => shops.Length;
 
         public void AddShop(Shop shop)
         {

@@ -23,14 +23,9 @@
             this.city = city;
         }
 
-        public string GetShopInfo()
-        {
-            return $"Shop {shopName} was opened in {openingYear}";
-        }
+        public string GetShopInfo() => $"Shop {shopName} was opened in {openingYear}";
 
-        public void PrintShopName()
-        {
-            Console.WriteLine($"Shop name is {shopName}");
-        }
+        public void PrintShopName() => Console.WriteLine($"Shop name is {shopName}");
+
     }
 }

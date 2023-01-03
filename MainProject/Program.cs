@@ -6,9 +6,6 @@ namespace MainProject
     {
         static void Main(string[] args)
         {
-            Company namaiCompany = new Company();
-            namaiCompany.PrintCompanyName();
-
             Company optioCompany = new Company();
             optioCompany.name = "Optio";
             optioCompany.foundationYear = 1900;
@@ -27,7 +24,7 @@ namespace MainProject
 
             Shop briedisFirstShop = new Shop("Briedis knygynas", 2017, 3, "Kaunas");
             Shop briedisSecondShop = new Shop("Briedis leidykla", 2018, 4, "Klaipeda");
-            Shop briedisThirdShop = new Shop("Briedis pagrindini knygymas", 2019, 9, "Kaunas");
+            Shop briedisThirdShop = new Shop("Briedis pagrindinis knygynas", 2019, 9, "Kaunas");
             Shop[] shops = new Shop[] { briedisFirstShop, briedisSecondShop, briedisThirdShop };
             Company briedisCompany = new Company("Leidykla briedis", 2016, shops);
             briedisCompany.PrintAllShops();

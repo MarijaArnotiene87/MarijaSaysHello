@@ -9,16 +9,16 @@
 
         public Shop(string name, int year)
         {
-            this.shopName = name;
-            this.openingYear = year;
-            this.employeeCount = 1;
-            this.city = "unknown";
+            shopName = name;
+            openingYear = year;
+            employeeCount = 1;
+            city = "unknown";
         }
 
         public Shop(string name, int year, int employeeCount, string city)
         {
-            this.shopName = name;
-            this.openingYear = year;
+            shopName = name;
+            openingYear = year;
             this.employeeCount = employeeCount;
             this.city = city;
         }

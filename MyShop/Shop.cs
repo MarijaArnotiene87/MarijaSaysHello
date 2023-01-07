@@ -2,30 +2,58 @@
 {
     public class Shop
     {
-        public string shopName;
-        public int openingYear;
-        public int employeeCount;
-        public string city;
+        private string shopName;
+        private int openingYear;
+        private int employeeCount;
+        private string city;
+
+        public string ShopName
+        {
+            get { return shopName; }
+
+            private set { shopName = value; }
+        }
+
+        public int OpeningYear
+        {
+            get { return openingYear; }
+
+            private set { openingYear = value; }
+        }
+
+        public int EmployeeCount
+        {
+            get { return employeeCount; }
+
+            private set { employeeCount = value; }
+        }
+
+        public string City
+        {
+            get { return city; }
+
+            private set { city = value; }
+        }
 
         public Shop(string name, int year)
         {
-            shopName = name;
-            openingYear = year;
-            employeeCount = 1;
-            city = "unknown";
+            ShopName = name;
+            OpeningYear = year;
+            EmployeeCount = 1;
+            City = "unknown";
         }
 
         public Shop(string name, int year, int employeeCount, string city)
         {
-            shopName = name;
-            openingYear = year;
-            this.employeeCount = employeeCount;
-            this.city = city;
+            ShopName = name;
+            OpeningYear = year;
+            EmployeeCount = employeeCount;
+            City = city;
         }
 
-        public string GetShopInfo() => $"Shop {shopName} was opened in {openingYear}";
+        public string GetShopInfo() => $"Shop {ShopName} was opened in {OpeningYear}";
 
-        public void PrintShopName() => Console.WriteLine($"Shop name is {shopName}");
+        public void PrintShopName() => Console.WriteLine($"Shop name is {ShopName}");
 
     }
 }

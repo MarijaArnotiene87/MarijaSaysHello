@@ -4,39 +4,58 @@ namespace MainProject
 {
     public class Company
     {
-        public string name;
-        public int foundationYear;
-        public Shop[] shops;
+        private int foundationYear;
+        private Shop[] shops;
+        private static int minimumCarCount;
 
-        public Company()
+        public string Name { get; private set; }
+
+        public int FoundationYear
         {
+            get { return foundationYear; }
+
+            private set { foundationYear = value; }
+        }
+
+        public Shop[] Shops
+        {
+            get { return shops; }
+
+            private set { shops = value; }
+        }
+
+        public static int MinimumCarCount
+        {
+            get { return minimumCarCount; }
+
+            set { minimumCarCount = value; }
         }
 
         public Company(string name, int year)
         {
-            this.name = name;
-            foundationYear = year;
+            Name = name;
+            FoundationYear = year;
         }
 
         public Company(string name, int year, Shop shop)
         {
-            this.name = name;
-            foundationYear = year;
-            shops = new[] { shop };
+            Name = name;
+            FoundationYear = year;
+            Shops = new[] { shop };
         }
 
         public Company(string name, int year, Shop[] shops)
         {
-            this.name = name;
-            foundationYear = year;
-            this.shops = shops;
+            Name = name;
+            FoundationYear = year;
+            Shops = shops;
         }
 
-        public string GetCompanyInfo() => $"Company {name} was established in {foundationYear}";
+        public string GetCompanyInfo() => $"Company {Name} was established in {FoundationYear}";
 
-        public void PrintCompanyName() => Console.WriteLine($"Company name is {name}");
+        public void PrintCompanyName() => Console.WriteLine($"Company name is {Name}");
 
-        public int GetShopCount() => shops.Length;
+        public int GetShopCount() => Shops.Length;
 
         public void AddShop(Shop shop)
         {
@@ -64,13 +83,18 @@ namespace MainProject
             int companyEmployeeCount = 0;
             foreach (Shop shop in shops)
             {
-                if (shop.city == city)
+                if (shop.City == city)
                 {
-                    companyEmployeeCount += shop.employeeCount;
+                    companyEmployeeCount += shop.EmployeeCount;
                 }
             }
 
             Console.WriteLine($"Count of shops employees: {companyEmployeeCount}");
+        }
+
+        public static void PrintMinimumCarCount()
+        {
+            Console.WriteLine($"Minimum car count for openning company is: {minimumCarCount}");
         }
 
     }

@@ -6,12 +6,12 @@ namespace MainProject
     {
         static void Main(string[] args)
         {
-            Company optioCompany = new Company();
-            optioCompany.name = "Optio";
-            optioCompany.foundationYear = 1900;
+            Company.MinimumCarCount = 5;
+
+            Company optioCompany = new Company("Optio", 1900);
             optioCompany.PrintCompanyName();
 
-            Company dellCompany = new Company { name = "Dell", foundationYear = 2015 };
+            Company dellCompany = new Company("Dell", 2015);
             dellCompany.PrintCompanyName();
 
             Shop seikShop = new Shop("Seik accossories", 2015, 5, "Vilnius");
@@ -29,6 +29,8 @@ namespace MainProject
             Company briedisCompany = new Company("Leidykla briedis", 2016, shops);
             briedisCompany.PrintAllShops();
             briedisCompany.PrintCompanyEmployeesCountByCity("Kaunas");
+
+            Company.PrintMinimumCarCount();
         }
     }
 }

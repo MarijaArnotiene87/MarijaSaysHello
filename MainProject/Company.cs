@@ -7,6 +7,7 @@ namespace MainProject
         private int foundationYear;
         private Shop[] shops;
         private static int minimumCarCount;
+        public readonly string vatNumber;
 
         public string Name { get; private set; }
 
@@ -31,27 +32,35 @@ namespace MainProject
             set { minimumCarCount = value; }
         }
 
-        public Company(string name, int year)
+        public Company(string name, int year, string vatNumber)
         {
             Name = name;
             FoundationYear = year;
+            this.vatNumber = vatNumber;
         }
 
-        public Company(string name, int year, Shop shop)
+        public Company(string name, int year, Shop shop, string vatNumber)
         {
             Name = name;
             FoundationYear = year;
             Shops = new[] { shop };
+            this.vatNumber = vatNumber;
         }
 
-        public Company(string name, int year, Shop[] shops)
+        public Company(string name, int year, Shop[] shops, string vatNumber)
         {
             Name = name;
             FoundationYear = year;
             Shops = shops;
+            this.vatNumber = vatNumber;
         }
 
-        public string GetCompanyInfo() => $"Company {Name} was established in {FoundationYear}";
+        static Company()
+        {
+            minimumCarCount = 2;
+        }
+
+        public virtual string GetCompanyInfo() => $"Company {Name} was established in {FoundationYear} and VAT number {vatNumber}";
 
         public void PrintCompanyName() => Console.WriteLine($"Company name is {Name}");
 
@@ -59,8 +68,15 @@ namespace MainProject
 
         public void AddShop(Shop shop)
         {
-            Array.Resize(ref shops, shops.Length + 1);
-            shops[shops.Length - 1] = shop;
+            if (shops == null)
+            {
+                shops =  new[] { shop };
+            }
+            else
+            {
+                Array.Resize(ref shops, shops.Length + 1);
+                shops[shops.Length - 1] = shop;
+            }
         }
 
         public void AddShop(string shopName, int year)
@@ -78,7 +94,7 @@ namespace MainProject
             }
         }
 
-        public void PrintCompanyEmployeesCountByCity(string city)
+        public virtual void PrintCompanyEmployeesCountByCity(string city)
         {
             int companyEmployeeCount = 0;
             foreach (Shop shop in shops)

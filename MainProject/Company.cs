@@ -4,33 +4,20 @@ namespace MainProject
 {
     public class Company
     {
-        private int foundationYear;
         private Shop[] shops;
-        private static int minimumCarCount;
         public readonly string vatNumber;
 
         public string Name { get; private set; }
 
-        public int FoundationYear
-        {
-            get { return foundationYear; }
-
-            private set { foundationYear = value; }
-        }
+        public int FoundationYear { get; private set; }
 
         public Shop[] Shops
         {
             get { return shops; }
-
             private set { shops = value; }
         }
 
-        public static int MinimumCarCount
-        {
-            get { return minimumCarCount; }
-
-            set { minimumCarCount = value; }
-        }
+        public static int MinimumCarCount { get; private set; }
 
         public Company(string name, int year, string vatNumber)
         {
@@ -57,7 +44,7 @@ namespace MainProject
 
         static Company()
         {
-            minimumCarCount = 2;
+            MinimumCarCount = 2;
         }
 
         public virtual string GetCompanyInfo() => $"Company {Name} was established in {FoundationYear} and VAT number {vatNumber}";
@@ -70,7 +57,7 @@ namespace MainProject
         {
             if (shops == null)
             {
-                shops =  new[] { shop };
+                shops = new[] { shop };
             }
             else
             {
@@ -110,7 +97,7 @@ namespace MainProject
 
         public static void PrintMinimumCarCount()
         {
-            Console.WriteLine($"Minimum car count for openning company is: {minimumCarCount}");
+            Console.WriteLine($"Minimum car count for openning company is: {MinimumCarCount}");
         }
 
     }

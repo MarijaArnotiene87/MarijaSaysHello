@@ -2,38 +2,13 @@
 {
     public class Shop
     {
-        private string shopName;
-        private int openingYear;
-        private int employeeCount;
-        private string city;
+        public string ShopName { get; private set; }
 
-        public string ShopName
-        {
-            get { return shopName; }
+        public int OpeningYear { get; private set; }
 
-            private set { shopName = value; }
-        }
+        public int EmployeeCount { get; private set; }
 
-        public int OpeningYear
-        {
-            get { return openingYear; }
-
-            private set { openingYear = value; }
-        }
-
-        public int EmployeeCount
-        {
-            get { return employeeCount; }
-
-            private set { employeeCount = value; }
-        }
-
-        public string City
-        {
-            get { return city; }
-
-            private set { city = value; }
-        }
+        public string City { get; private set; }
 
         public Shop(string name, int year)
         {

@@ -38,10 +38,6 @@ namespace MainProject
             baltoUABCompany.PrintCompanyEmployeesCountByCity("Vilnius");
             Console.WriteLine(baltoUABCompany.GetCompanyInfo());
             baltoUABCompany.PrintCompanyName();
-
-            //Downcasting
-            var almaLiteraCompany = new Company("Alma Litera", 2020, "LT007");
-            //var almaLiteraUABCompany = (UABCompany)almaLiteraCompany; ------> sprosit v chiom problema, vikidivaet Exception
         }
     }
 }

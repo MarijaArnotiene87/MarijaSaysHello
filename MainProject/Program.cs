@@ -110,6 +110,7 @@ namespace MainProject
             wildAnimal.Run();
             Console.WriteLine(wildAnimal.jumpOnTree);
             Console.WriteLine(wildAnimal.route);
+            Console.WriteLine($"Wild animal min height {minHeight} m ");
 
             Console.WriteLine("**********************************");
 
@@ -119,6 +120,7 @@ namespace MainProject
             petAnimal.Run();
             Console.WriteLine(petAnimal.jumpOnTree);
             Console.WriteLine(petAnimal.route);
+            Console.WriteLine($"Pet average speed {averageSpeed} km/h ");
         }
     }
 }

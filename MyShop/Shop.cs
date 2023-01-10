@@ -2,30 +2,28 @@
 {
     public class Shop
     {
-        public string shopName;
-        public int openingYear;
-        public int employeeCount;
-        public string city;
+        public string ShopName { get; private set; }
 
-        public Shop(string name, int year)
-        {
-            shopName = name;
-            openingYear = year;
-            employeeCount = 1;
-            city = "unknown";
-        }
+        public int OpeningYear { get; private set; }
+
+        public int EmployeeCount { get; private set; }
+
+        public string City { get; private set; }
+
+        public Shop(string name, int year) : this(name, year, 1, "unknown")
+        { }
 
         public Shop(string name, int year, int employeeCount, string city)
         {
-            shopName = name;
-            openingYear = year;
-            this.employeeCount = employeeCount;
-            this.city = city;
+            ShopName = name;
+            OpeningYear = year;
+            EmployeeCount = employeeCount;
+            City = city;
         }
 
-        public string GetShopInfo() => $"Shop {shopName} was opened in {openingYear}";
+        public string GetShopInfo() => $"Shop {ShopName} was opened in {OpeningYear}";
 
-        public void PrintShopName() => Console.WriteLine($"Shop name is {shopName}");
+        public void PrintShopName() => Console.WriteLine($"Shop name is {ShopName}");
 
     }
 }

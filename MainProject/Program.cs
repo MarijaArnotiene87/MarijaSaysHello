@@ -6,29 +6,38 @@ namespace MainProject
     {
         static void Main(string[] args)
         {
-            Company optioCompany = new Company();
-            optioCompany.name = "Optio";
-            optioCompany.foundationYear = 1900;
+            var optioCompany = new Company("Optio", 1900, "LT001");
             optioCompany.PrintCompanyName();
 
-            Company dellCompany = new Company { name = "Dell", foundationYear = 2015 };
+            var dellCompany = new Company("Dell", 2015, "LT002");
             dellCompany.PrintCompanyName();
 
-            Shop seikShop = new Shop("Seik accossories", 2015, 5, "Vilnius");
-            Company seikCompany = new Company("Seik", 2014, seikShop);
+            var seikShop = new Shop("Seik accossories", 2015, 5, "Vilnius");
+            var seikCompany = new Company("Seik", 2014, seikShop, "LT003");
             seikCompany.PrintAllShops();
+            Console.WriteLine(seikShop.GetShopInfo());
 
-            Shop knygynasShop = new Shop("Svajoniu knygu knygynas", 2020);
-            Company svajoniuCompany = new Company("Svajoniu knygos", 2019, knygynasShop);
+            var knygynasShop = new Shop("Svajoniu knygu knygynas", 2020);
+            var svajoniuCompany = new Company("Svajoniu knygos", 2019, knygynasShop, "LT004");
             svajoniuCompany.PrintAllShops();
 
-            Shop briedisFirstShop = new Shop("Briedis knygynas", 2017, 3, "Kaunas");
-            Shop briedisSecondShop = new Shop("Briedis leidykla", 2018, 4, "Klaipeda");
-            Shop briedisThirdShop = new Shop("Briedis pagrindinis knygynas", 2019, 9, "Kaunas");
-            Shop[] shops = new Shop[] { briedisFirstShop, briedisSecondShop, briedisThirdShop };
-            Company briedisCompany = new Company("Leidykla briedis", 2016, shops);
+            var briedisFirstShop = new Shop("Briedis knygynas", 2017, 3, "Kaunas");
+            var briedisSecondShop = new Shop("Briedis leidykla", 2018, 4, "Klaipeda");
+            var briedisThirdShop = new Shop("Briedis pagrindinis knygynas", 2019, 9, "Kaunas");
+            var shops = new Shop[] { briedisFirstShop, briedisSecondShop, briedisThirdShop };
+            var briedisCompany = new Company("Leidykla briedis", 2016, shops, "LT005");
             briedisCompany.PrintAllShops();
             briedisCompany.PrintCompanyEmployeesCountByCity("Kaunas");
+
+            //Static method
+            Company.PrintMinimumCarCount();
+
+            var baltoShop = new Shop("Balto parduotuve", 2014, 2, "Vilnius");
+            var baltoUABCompany = new UABCompany("Balto", 2012, "LT006", "Deividas");
+            baltoUABCompany.AddShop(baltoShop);
+            baltoUABCompany.PrintCompanyEmployeesCountByCity("Vilnius");
+            Console.WriteLine(baltoUABCompany.GetCompanyInfo());
+            baltoUABCompany.PrintCompanyName();
         }
     }
 }

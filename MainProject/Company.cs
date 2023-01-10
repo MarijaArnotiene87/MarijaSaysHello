@@ -4,73 +4,94 @@ namespace MainProject
 {
     public class Company
     {
-        public string name;
-        public int foundationYear;
-        public Shop[] shops;
+        private Shop[] _shops;
+        private readonly string _vatNumber;
 
-        public Company()
+        public string Name { get; private set; }
+
+        public int FoundationYear { get; private set; }
+
+        public Shop[] Shops
         {
+            get { return _shops; }
+            private set { _shops = value; }
         }
 
-        public Company(string name, int year)
+        public static int MinimumCarCount { get; private set; }
+
+        public Company(string name, int year, string vatNumber) : this(name, year, shops: null, vatNumber)
+        { }
+
+        public Company(string name, int year, Shop shop, string vatNumber) : this(name, year, new[] { shop }, vatNumber)
+        { }
+
+        public Company(string name, int year, Shop[] shops, string vatNumber)
         {
-            this.name = name;
-            foundationYear = year;
+            Name = name;
+            FoundationYear = year;
+            Shops = shops;
+            _vatNumber = vatNumber;
         }
 
-        public Company(string name, int year, Shop shop)
+        static Company()
         {
-            this.name = name;
-            foundationYear = year;
-            shops = new[] { shop };
+            MinimumCarCount = 2;
         }
 
-        public Company(string name, int year, Shop[] shops)
-        {
-            this.name = name;
-            foundationYear = year;
-            this.shops = shops;
-        }
+        public virtual string GetCompanyInfo() => $"Company {Name} was established in {FoundationYear} and VAT number {_vatNumber}";
 
-        public string GetCompanyInfo() => $"Company {name} was established in {foundationYear}";
+        public void PrintCompanyName() => Console.WriteLine($"Company name is {Name}");
 
-        public void PrintCompanyName() => Console.WriteLine($"Company name is {name}");
-
-        public int GetShopCount() => shops.Length;
+        public int GetShopCount() => Shops.Length;
 
         public void AddShop(Shop shop)
         {
-            Array.Resize(ref shops, shops.Length + 1);
-            shops[shops.Length - 1] = shop;
+            if (_shops == null)
+            {
+                _shops = new[] { shop };
+            }
+            else
+            {
+                Array.Resize(ref _shops, _shops.Length + 1);
+                _shops[_shops.Length - 1] = shop;
+            }
         }
 
         public void AddShop(string shopName, int year)
         {
             Shop shop = new Shop(shopName, year);
-            Array.Resize(ref shops, shops.Length + 1);
-            shops[shops.Length - 1] = shop;
+            Array.Resize(ref _shops, _shops.Length + 1);
+            _shops[_shops.Length - 1] = shop;
         }
 
         public void PrintAllShops()
         {
-            foreach (Shop shop in shops)
+            Console.WriteLine($"Company {Name} shops: ");
+            foreach (Shop shop in _shops)
             {
                 shop.PrintShopName();
             }
+
+            Console.WriteLine();
         }
 
-        public void PrintCompanyEmployeesCountByCity(string city)
+        public virtual void PrintCompanyEmployeesCountByCity(string city)
         {
             int companyEmployeeCount = 0;
-            foreach (Shop shop in shops)
+            foreach (Shop shop in _shops)
             {
-                if (shop.city == city)
+                if (shop.City == city)
                 {
-                    companyEmployeeCount += shop.employeeCount;
+                    companyEmployeeCount += shop.EmployeeCount;
                 }
             }
 
-            Console.WriteLine($"Count of shops employees: {companyEmployeeCount}");
+            Console.WriteLine($"Company {Name} has {companyEmployeeCount} employees in the {city} city");
+        }
+
+        public static void PrintMinimumCarCount()
+        {
+            Console.WriteLine($"Minimum car count for openning company is: {MinimumCarCount}");
         }
 
     }

@@ -1,4 +1,5 @@
 ﻿using MainProject.Task7;
+using MainProject.Task7.Animal;
 using MyShopLibrary;
 
 namespace MainProject
@@ -39,11 +40,6 @@ namespace MainProject
             baltoUABCompany.PrintCompanyEmployeesCountByCity("Vilnius");
             Console.WriteLine(baltoUABCompany.GetCompanyInfo());
             baltoUABCompany.PrintCompanyName();
-
-            //Downcasting
-            var almaLiteraCompany = new Company("Alma Litera", 2020, "LT007");
-            //var almaLiteraUABCompany = (UABCompany)almaLiteraCompany; ------> sprosit v chiom problema, vikidivaet Exception
-
 
             //Task 7
             var mintHerb = new Herb
@@ -105,6 +101,24 @@ namespace MainProject
             sequoiasTree.PrintBarkInfo();
             sequoiasTree.bestPlantingMonth = "may";
             sequoiasTree.PrintGrowInfo();
+
+            Console.WriteLine("**********************************");
+
+            WildAnimal wildAnimal = new WildAnimal();
+            var minHeight = IJump.minHeight;
+            wildAnimal.Jump();
+            wildAnimal.Run();
+            Console.WriteLine(wildAnimal.jumpOnTree);
+            Console.WriteLine(wildAnimal.route);
+
+            Console.WriteLine("**********************************");
+
+            Pet petAnimal= new Pet();
+            var averageSpeed = IRun.averageSpeed;
+            petAnimal.Jump();
+            petAnimal.Run();
+            Console.WriteLine(petAnimal.jumpOnTree);
+            Console.WriteLine(petAnimal.route);
         }
     }
 }

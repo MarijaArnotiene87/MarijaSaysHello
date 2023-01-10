@@ -6,7 +6,7 @@
 
         public UABCompany(string name, int year, string vatNumber, string ownerName) : base(name, year, vatNumber)
         {
-            this._ownerName = ownerName;
+            _ownerName = ownerName;
         }
 
         public override void PrintCompanyEmployeesCountByCity(string city)

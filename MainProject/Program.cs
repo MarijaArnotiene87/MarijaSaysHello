@@ -15,7 +15,7 @@ namespace MainProject
             var seikShop = new Shop("Seik accossories", 2015, 5, "Vilnius");
             var seikCompany = new Company("Seik", 2014, seikShop, "LT003");
             seikCompany.PrintAllShops();
-            seikShop.GetShopInfo();
+            Console.WriteLine(seikShop.GetShopInfo());
 
             var knygynasShop = new Shop("Svajoniu knygu knygynas", 2020);
             var svajoniuCompany = new Company("Svajoniu knygos", 2019, knygynasShop, "LT004");

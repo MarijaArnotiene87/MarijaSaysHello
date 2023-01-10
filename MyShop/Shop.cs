@@ -10,13 +10,8 @@
 
         public string City { get; private set; }
 
-        public Shop(string name, int year)
-        {
-            ShopName = name;
-            OpeningYear = year;
-            EmployeeCount = 1;
-            City = "unknown";
-        }
+        public Shop(string name, int year) : this(name, year, 1, "unknown")
+        { }
 
         public Shop(string name, int year, int employeeCount, string city)
         {

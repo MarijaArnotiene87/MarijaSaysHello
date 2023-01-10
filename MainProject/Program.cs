@@ -108,7 +108,7 @@ namespace MainProject
             var minHeight = IJump.minHeight;
             wildAnimal.Jump();
             wildAnimal.Run();
-            Console.WriteLine(wildAnimal.jumpOnTree);
+            Console.WriteLine(wildAnimal.JumpOnTree);
             Console.WriteLine(wildAnimal.route);
             Console.WriteLine($"Wild animal min height {minHeight} m ");
 
@@ -118,8 +118,8 @@ namespace MainProject
             var averageSpeed = IRun.averageSpeed;
             petAnimal.Jump();
             petAnimal.Run();
-            Console.WriteLine(petAnimal.jumpOnTree);
-            Console.WriteLine(petAnimal.route);
+            Console.WriteLine(petAnimal.JumpOnTree);
+            Console.WriteLine(petAnimal.Route);
             Console.WriteLine($"Pet average speed {averageSpeed} km/h ");
         }
     }

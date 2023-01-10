@@ -4,7 +4,7 @@
     {
         public const int minHeight = 10;
 
-        string jumpOnTree { get; }
+        string JumpOnTree { get; }
 
         void Jump();
     }

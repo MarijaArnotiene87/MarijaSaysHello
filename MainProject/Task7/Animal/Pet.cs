@@ -1,12 +1,13 @@
 ﻿using MainProject.Task7.Animal;
+using System.Net.Cache;
 
 namespace MainProject.Task7
 {
     public class Pet : IJump, IRun
     {
-        public string jumpOnTree { get { return "Oh, you are scary..."; } }
+        public string JumpOnTree { get { return "Oh, you are scary..."; } }
 
-        public string route { get { return "Run to the moon"; } }
+        public string Route { get { return "Run to the moon"; } }
 
         public void Jump()
         {

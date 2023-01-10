@@ -4,7 +4,7 @@
     {
         public const int averageSpeed = 30;
 
-        string jumpOnTree { get; }
+        string JumpOnTree { get; }
 
         void Run();
     }

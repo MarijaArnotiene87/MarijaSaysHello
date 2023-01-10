@@ -80,6 +80,7 @@ namespace MainProject
             {
                 shop.PrintShopName();
             }
+
             Console.WriteLine();
         }
 

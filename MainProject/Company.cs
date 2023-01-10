@@ -19,20 +19,11 @@ namespace MainProject
 
         public static int MinimumCarCount { get; private set; }
 
-        public Company(string name, int year, string vatNumber)
-        {
-            Name = name;
-            FoundationYear = year;
-            _vatNumber = vatNumber;
-        }
+        public Company(string name, int year, string vatNumber) : this(name, year, shops: null, vatNumber)
+        { }
 
-        public Company(string name, int year, Shop shop, string vatNumber)
-        {
-            Name = name;
-            FoundationYear = year;
-            Shops = new[] { shop };
-            _vatNumber = vatNumber;
-        }
+        public Company(string name, int year, Shop shop, string vatNumber) : this(name, year, new[] { shop }, vatNumber)
+        { }
 
         public Company(string name, int year, Shop[] shops, string vatNumber)
         {

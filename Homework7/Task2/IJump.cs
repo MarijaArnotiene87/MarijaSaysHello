@@ -1,4 +1,4 @@
-﻿namespace MainProject.Task7.Animal
+﻿namespace Homework7.Task2
 {
     public interface IJump
     {

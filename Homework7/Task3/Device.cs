@@ -1,4 +1,4 @@
-﻿namespace AutomationCources.Lecture_7.Homework
+﻿namespace Homework7.Task3
 {
     public abstract class Device
     {

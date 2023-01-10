@@ -1,6 +1,4 @@
-﻿using AutomationCources.Lecture_7.Homework;
-
-namespace MainProject.Task7.EShop
+﻿namespace Homework7.Task3
 {
     public abstract class DeviceWithCamera : Device
     {

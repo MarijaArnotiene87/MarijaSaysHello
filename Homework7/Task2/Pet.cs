@@ -1,7 +1,4 @@
-﻿using MainProject.Task7.Animal;
-using System.Net.Cache;
-
-namespace MainProject.Task7
+﻿namespace Homework7.Task2
 {
     public class Pet : IJump, IRun
     {

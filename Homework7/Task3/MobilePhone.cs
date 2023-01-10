@@ -1,6 +1,4 @@
-﻿using MainProject.Task7.EShop;
-
-namespace AutomationCources.Lecture_7.Homework
+﻿namespace Homework7.Task3
 {
     public class MobilePhone : DeviceWithCamera, IPhoto
     {

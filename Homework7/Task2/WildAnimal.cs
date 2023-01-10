@@ -1,6 +1,4 @@
-﻿using MainProject.Task7.Animal;
-
-namespace MainProject.Task7
+﻿namespace Homework7.Task2
 {
     public class WildAnimal : IJump, IRun
     {

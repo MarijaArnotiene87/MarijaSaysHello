@@ -1,4 +1,4 @@
-﻿namespace MainProject.Task7.EShop
+﻿namespace Homework7.Task3
 {
     public interface IPrint
     {

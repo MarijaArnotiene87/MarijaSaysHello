@@ -1,4 +1,4 @@
-﻿namespace MainProject.Task7
+﻿namespace Homework7.Task1
 {
     public class Tree : Plant
     {

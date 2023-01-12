@@ -2,7 +2,7 @@
 {
     public interface IRun
     {
-        public const int averageSpeed = 30;
+        public const int AverageSpeed = 30;
 
         string JumpOnTree { get; }
 

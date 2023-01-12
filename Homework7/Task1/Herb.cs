@@ -6,10 +6,10 @@
         public string flavour;
         private string _colour;
 
-        public int minWeight { get; set; }
-        public int maxWeight { get; set; }
+        public int MinWeight { get; set; }
+        public int MaxWeight { get; set; }
 
-        public override string Colour { get => _colour + "/green"; set { _colour = value; } }
+        public override string Colour { get => _colour + "/green"; set => _colour = value; }
 
         public override int GrowingTimeInWeeks { get; set; }
 
@@ -23,9 +23,9 @@
             Console.WriteLine($"Odor is {odor} and flavour like {flavour}");
         }
 
-        public int getAverageWeight()
+        public int GetAverageWeight()
         {
-            return (minWeight + maxWeight) / 2;
+            return (MinWeight + MaxWeight) / 2;
         }
     }
 }

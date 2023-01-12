@@ -2,9 +2,9 @@
 {
     public class Pet : IJump, IRun
     {
-        public string JumpOnTree { get { return "Oh, you are scary..."; } }
+        public string JumpOnTree { get => "Oh, you are scary..."; }
 
-        public string Route { get { return "Run to the moon"; } }
+        public string Route { get => "Run to the moon"; }
 
         public void Jump()
         {

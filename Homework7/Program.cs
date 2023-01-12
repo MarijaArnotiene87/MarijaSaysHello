@@ -15,11 +15,11 @@ namespace Homework7
                 odor = "menthol",
                 bestPlantingMonth = "march",
                 GrowingTimeInWeeks = 4,
-                minWeight = 10,
-                maxWeight = 50
+                MinWeight = 10,
+                MaxWeight = 50
             };
-            mintHerb.maxWeight += 5;
-            Console.WriteLine($"{mintHerb.name} average weight is {mintHerb.getAverageWeight()}");
+            mintHerb.MaxWeight += 5;
+            Console.WriteLine($"{mintHerb.name} average weight is {mintHerb.GetAverageWeight()}");
             mintHerb.PrintGrowInfo();
 
             var basilHerb = new Herb
@@ -30,10 +30,10 @@ namespace Homework7
                 odor = "sweet",
                 bestPlantingMonth = "february",
                 GrowingTimeInWeeks = 3,
-                minWeight = 8,
-                maxWeight = 60
+                MinWeight = 8,
+                MaxWeight = 60
             };
-            basilHerb.minWeight = 4;
+            basilHerb.MinWeight = 4;
             basilHerb.PrintOdorAndFlavour();
             basilHerb.PrintPlantInfo();
 
@@ -45,11 +45,11 @@ namespace Homework7
                 hasBark = true,
                 bestPlantingMonth = "may",
                 GrowingTimeInWeeks = 60,
-                minHeight = 12,
-                maxHeight = 500
+                MinHeight = 12,
+                MaxHeight = 500
             };
             cherryTree.GrowingTimeInWeeks = 65;
-            Console.WriteLine($"{cherryTree.name} average height is {cherryTree.getAverageHeight()}");
+            Console.WriteLine($"{cherryTree.name} average height is {cherryTree.GetAverageHeight()}");
             cherryTree.PrintPlantInfo();
 
             var sequoiasTree = new Tree
@@ -60,8 +60,8 @@ namespace Homework7
                 hasBark = true,
                 bestPlantingMonth = "april",
                 GrowingTimeInWeeks = 200,
-                minHeight = 9,
-                maxHeight = 300
+                MinHeight = 9,
+                MaxHeight = 300
             };
             sequoiasTree.PrintBarkInfo();
             sequoiasTree.bestPlantingMonth = "may";
@@ -74,13 +74,13 @@ namespace Homework7
             wildAnimal.Jump();
             wildAnimal.Run();
             Console.WriteLine(wildAnimal.JumpOnTree);
-            Console.WriteLine(wildAnimal.route);
+            Console.WriteLine(wildAnimal.Route);
             Console.WriteLine($"Wild animal min height {minHeight} m ");
 
             Console.WriteLine("**********************************");
 
             Pet petAnimal = new Pet();
-            var averageSpeed = IRun.averageSpeed;
+            var averageSpeed = IRun.AverageSpeed;
             petAnimal.Jump();
             petAnimal.Run();
             Console.WriteLine(petAnimal.JumpOnTree);

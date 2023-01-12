@@ -9,12 +9,6 @@
             this.numberOfPixelsInCamera = numberOfPixelsInCamera;
         }
 
-        public string Description
-        {
-            get
-            {
-                return $"Price: {Price}, model:{ModelName}, number of pixels in camera: {numberOfPixelsInCamera}";
-            }
-        }
+        public string Description { get => $"Price: {Price}, model:{ModelName}, number of pixels in camera: {numberOfPixelsInCamera}"; }
     }
 }

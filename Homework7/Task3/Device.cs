@@ -2,25 +2,14 @@
 {
     public abstract class Device
     {
-        private string? modelName;
-        private decimal price;
+        private protected string ModelName { get; set; }
 
-        private protected string ModelName
-        {
-            get { return modelName; }
-            set { modelName = value; }
-        }
+        private protected decimal Price { get; set; }
 
-        private protected decimal Price
+        public Device(string modelName, decimal price)
         {
-            get { return price; }
-            set { price = value; }
-        }
-
-        public Device(string? modelName, decimal price)
-        {
-            this.modelName = modelName;
-            this.price = price;
+            ModelName = modelName;
+            Price = price;
         }
 
         public abstract void TurnOn();

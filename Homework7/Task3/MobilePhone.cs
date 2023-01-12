@@ -11,15 +11,9 @@
             NumberOfPixelsInCamera = numberOfPixelsInCamera;
         }
 
-        public void TakePhoto()
-        {
-            Console.WriteLine("Press button on the screen and photo is ready");
-        }
+        public void TakePhoto() => Console.WriteLine("Press button on the screen and photo is ready");
 
-        public override void TurnOn()
-        {
-            Console.WriteLine("Press left side button");
-        }
+        public override void TurnOn() => Console.WriteLine("Press left side button");
 
     }
 }

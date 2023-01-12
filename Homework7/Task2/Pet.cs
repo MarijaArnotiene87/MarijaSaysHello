@@ -6,14 +6,8 @@
 
         public string Route { get => "Run to the moon"; }
 
-        public void Jump()
-        {
-            Console.WriteLine("Pets jumps not so very high.");
-        }
+        public void Jump() => Console.WriteLine("Pets jumps not so very high.");
 
-        public void Run()
-        {
-            Console.WriteLine("Run! Run! Run!");
-        }
+        public void Run() => Console.WriteLine("Run! Run! Run!");
     }
 }

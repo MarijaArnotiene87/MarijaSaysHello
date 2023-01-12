@@ -70,7 +70,7 @@ namespace Homework7
             Console.WriteLine("**********************************");
 
             WildAnimal wildAnimal = new WildAnimal();
-            var minHeight = IJump.minHeight;
+            var minHeight = IJump.MinHeight;
             wildAnimal.Jump();
             wildAnimal.Run();
             Console.WriteLine(wildAnimal.JumpOnTree);

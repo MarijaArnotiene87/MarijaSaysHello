@@ -13,19 +13,10 @@
 
         public override int GrowingTimeInWeeks { get; set; }
 
-        public override void PrintGrowInfo()
-        {
-            Console.WriteLine($"Best planting month {BestPlantingMonth} and growing time in weeks {GrowingTimeInWeeks}");
-        }
+        public override void PrintGrowInfo() => Console.WriteLine($"Best planting month {BestPlantingMonth} and growing time in weeks {GrowingTimeInWeeks}");
 
-        public void PrintOdorAndFlavour()
-        {
-            Console.WriteLine($"Odor is {Odor} and flavour like {Flavour}");
-        }
+        public void PrintOdorAndFlavour() => Console.WriteLine($"Odor is {Odor} and flavour like {Flavour}");
 
-        public int GetAverageWeight()
-        {
-            return (MinWeight + MaxWeight) / 2;
-        }
+        public int GetAverageWeight() => (MinWeight + MaxWeight) / 2;
     }
 }

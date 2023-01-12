@@ -11,14 +11,8 @@
             PaperHeight = paperHeight;
         }
 
-        public void Print()
-        {
-            Console.WriteLine("Printing...");
-        }
+        public void Print() => Console.WriteLine("Printing...");
 
-        public override void TurnOn()
-        {
-            Console.WriteLine("Press button at the top");
-        }
+        public override void TurnOn() => Console.WriteLine("Press button at the top");
     }
 }

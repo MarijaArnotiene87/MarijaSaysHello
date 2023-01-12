@@ -13,19 +13,10 @@
 
         public override int GrowingTimeInWeeks { get => _growingTimeInWeeks + 1; set => _growingTimeInWeeks = value; }
 
-        public override void PrintGrowInfo()
-        {
-            Console.WriteLine($"Best planting month {BestPlantingMonth} and growing time in weeks {GrowingTimeInWeeks}");
-        }
+        public override void PrintGrowInfo() => Console.WriteLine($"Best planting month {BestPlantingMonth} and growing time in weeks {GrowingTimeInWeeks}");
 
-        public void PrintBarkInfo()
-        {
-            Console.WriteLine($"This plant {(HasBark ? "has" : "doesn't have")} bark and bark colour is {BarkColour}");
-        }
+        public void PrintBarkInfo() => Console.WriteLine($"This plant {(HasBark ? "has" : "doesn't have")} bark and bark colour is {BarkColour}");
 
-        public int GetAverageHeight()
-        {
-            return (MinHeight + MaxHeight) / 2;
-        }
+        public int GetAverageHeight() => (MinHeight + MaxHeight) / 2;
     }
 }

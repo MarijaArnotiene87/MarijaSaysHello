@@ -2,7 +2,7 @@
 {
     public interface IJump
     {
-        public const int minHeight = 10;
+        public const int MinHeight = 10;
 
         string JumpOnTree { get; }
 

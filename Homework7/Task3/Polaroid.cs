@@ -1,14 +1,19 @@
 ﻿namespace Homework7.Task3
 {
-    public class Polaroid : DeviceWithCamera, IPrint, IPhoto
+    public class Polaroid : Device, IPrint, IPhoto
     {
-        private int paperWidth;
-        private int paperHeight;
+        public int PaperWidth { get; set; }
+        public int PaperHeight { get; set; }
 
-        public Polaroid(int paperWidth, int paperHeight, double numberOfPixelsInCamera, string? modelName, decimal price) : base(modelName, price, numberOfPixelsInCamera)
+        public double NumberOfPixelsInCamera { get; set; }
+
+        public new string Description { get => $"Price: {Price}, model:{ModelName}, number of pixels in camera: {NumberOfPixelsInCamera}"; }
+
+        public Polaroid(int paperWidth, int paperHeight, double numberOfPixelsInCamera, string? modelName, decimal price) : base(modelName, price)
         {
-            this.paperWidth = paperWidth;
-            this.paperHeight = paperHeight;
+            PaperWidth = paperWidth;
+            PaperHeight = paperHeight;
+            NumberOfPixelsInCamera = numberOfPixelsInCamera;
         }
 
         public void TakePhoto()

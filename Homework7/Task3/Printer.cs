@@ -2,21 +2,13 @@
 {
     public class Printer : Device, IPrint
     {
-        private int paperWidth;
-        private int paperHeight;
+        public int PaperWidth { get; set; }
+        public int PaperHeight { get; set; }
 
         public Printer(string? modelName, decimal price, int paperWidth, int paperHeight) : base(modelName, price)
         {
-            this.paperWidth = paperWidth;
-            this.paperHeight = paperHeight;
-        }
-
-        public string Description
-        {
-            get
-            {
-                return $"Price: {Price}, model:{ModelName}";
-            }
+            PaperWidth = paperWidth;
+            PaperHeight = paperHeight;
         }
 
         public void Print()

@@ -1,9 +1,14 @@
 ﻿namespace Homework7.Task3
 {
-    public class MobilePhone : DeviceWithCamera, IPhoto
+    public class MobilePhone : Device, IPhoto
     {
-        public MobilePhone(double numberOfPixelsInCamera, string? modelName, decimal price) : base(modelName, price, numberOfPixelsInCamera)
+        public double NumberOfPixelsInCamera { get; set; }
+
+        public new string Description { get => $"Price: {Price}, model:{ModelName}, number of pixels in camera: {NumberOfPixelsInCamera}"; }
+
+        public MobilePhone(double numberOfPixelsInCamera, string? modelName, decimal price) : base(modelName, price)
         {
+            NumberOfPixelsInCamera = numberOfPixelsInCamera;
         }
 
         public void TakePhoto()

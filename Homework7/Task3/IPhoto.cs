@@ -2,6 +2,8 @@
 {
     public interface IPhoto
     {
+        public double NumberOfPixelsInCamera { get; set; }
+
         public void TakePhoto();
     }
 }

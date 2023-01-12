@@ -6,6 +6,8 @@
 
         private protected decimal Price { get; set; }
 
+        public string Description { get => $"Price: {Price}, model:{ModelName}"; }
+
         public Device(string modelName, decimal price)
         {
             ModelName = modelName;

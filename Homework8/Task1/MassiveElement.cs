@@ -2,14 +2,12 @@
 {
     internal class MassiveElement
     {
-        private static string? inputValue;
-
         public static void ShowMassiveElement()
         {
             int[] massive = { 8, 7, 1, 4, 2 };
             Console.WriteLine("Input index of element in massive:");
             string? inputedValue = Console.ReadLine();
-            string? checkedValue = inputedValue.Equals(string.Empty) ? null : inputValue;
+            string? checkedValue = inputedValue.Equals(string.Empty) ? null : inputedValue;
 
             try
             {
@@ -24,6 +22,14 @@
             catch (IndexOutOfRangeException ex)
             {
                 Console.WriteLine($"Out of range: {ex.Message}");
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine($"Format exception: {ex.Message}");
+            }
+            catch (OverflowException ex)
+            {
+                Console.WriteLine($"Number is too large: {ex.Message}");
             }
             catch (Exception ex)
             {

@@ -1,7 +1,4 @@
-﻿using Homework9.Task1;
-using System.Linq.Expressions;
-
-namespace Homework9
+﻿namespace Homework9
 {
     internal class Program
     {
@@ -14,23 +11,27 @@ namespace Homework9
 
             GenericClass<Man> genericMan = new GenericClass<Man>();
 
-            Man man= new Man();
+            Man man = new Man();
             genericMan.AddElementToArray(man);
 
             genericMan.ToString();
             genericWoman.ToString();
 
-            //В классе с методом Main напишите обобщённый метод, который будет генерировать заданное количество элементов,
-            //элементы могут быть только типа Man и Woman и должны создаваться через вызов конструктора их класса new()
+            GenerateElements<Man>(2);
+            GenerateElements<Woman>(3);
 
+            genericMan.GetElementFromArray(0);
+            genericMan.GetArrayLength();
+            genericMan.RemoveLastElementFromArray();
         }
 
-        void GenerateElements(int count)
+        static void GenerateElements<T>(int elementCount) where T : Human, new()
         {
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < elementCount; i++)
             {
-
+                new T();
             }
         }
+
     }
 }

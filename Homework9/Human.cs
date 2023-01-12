@@ -1,4 +1,4 @@
-﻿namespace Homework9.Task1
+﻿namespace Homework9
 {
     public abstract class Human
     {
@@ -10,5 +10,6 @@
             this.name = name;
             this.lastName = lastName;
         }
+
     }
 }

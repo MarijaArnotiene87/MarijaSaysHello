@@ -1,4 +1,4 @@
-﻿namespace Homework9.Task1
+﻿namespace Homework9
 {
     public class GenericClass<T> where T : Human
     {
@@ -26,6 +26,7 @@
             {
                 Console.WriteLine(element.name);
             }
+
             if (typeof(T) == typeof(Man))
             {
                 Console.WriteLine("There’re only men");
@@ -35,5 +36,6 @@
                 Console.WriteLine("There’re only women");
             }
         }
+
     }
 }

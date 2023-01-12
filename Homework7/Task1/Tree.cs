@@ -2,8 +2,8 @@
 {
     public class Tree : Plant
     {
-        public bool hasBark;
-        public string barkColour;
+        public bool HasBark;
+        public string BarkColour;
         private int _growingTimeInWeeks;
 
         public int MinHeight { get; set; }
@@ -15,12 +15,12 @@
 
         public override void PrintGrowInfo()
         {
-            Console.WriteLine($"Best planting month {bestPlantingMonth} and growing time in weeks {GrowingTimeInWeeks}");
+            Console.WriteLine($"Best planting month {BestPlantingMonth} and growing time in weeks {GrowingTimeInWeeks}");
         }
 
         public void PrintBarkInfo()
         {
-            Console.WriteLine($"This plant {(hasBark ? "has" : "doesn't have")} bark and bark colour is {barkColour}");
+            Console.WriteLine($"This plant {(HasBark ? "has" : "doesn't have")} bark and bark colour is {BarkColour}");
         }
 
         public int GetAverageHeight()

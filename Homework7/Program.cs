@@ -9,26 +9,26 @@ namespace Homework7
         {
             var mintHerb = new Herb
             {
-                name = "Mint",
+                Name = "Mint",
                 Colour = "blue",
-                flavour = "fresh",
-                odor = "menthol",
-                bestPlantingMonth = "march",
+                Flavour = "fresh",
+                Odor = "menthol",
+                BestPlantingMonth = "march",
                 GrowingTimeInWeeks = 4,
                 MinWeight = 10,
                 MaxWeight = 50
             };
             mintHerb.MaxWeight += 5;
-            Console.WriteLine($"{mintHerb.name} average weight is {mintHerb.GetAverageWeight()}");
+            Console.WriteLine($"{mintHerb.Name} average weight is {mintHerb.GetAverageWeight()}");
             mintHerb.PrintGrowInfo();
 
             var basilHerb = new Herb
             {
-                name = "Basil",
+                Name = "Basil",
                 Colour = "violet",
-                flavour = "savory",
-                odor = "sweet",
-                bestPlantingMonth = "february",
+                Flavour = "savory",
+                Odor = "sweet",
+                BestPlantingMonth = "february",
                 GrowingTimeInWeeks = 3,
                 MinWeight = 8,
                 MaxWeight = 60
@@ -39,32 +39,32 @@ namespace Homework7
 
             var cherryTree = new Tree
             {
-                name = "Cherry",
+                Name = "Cherry",
                 Colour = "white",
-                barkColour = "dark brown",
-                hasBark = true,
-                bestPlantingMonth = "may",
+                BarkColour = "dark brown",
+                HasBark = true,
+                BestPlantingMonth = "may",
                 GrowingTimeInWeeks = 60,
                 MinHeight = 12,
                 MaxHeight = 500
             };
             cherryTree.GrowingTimeInWeeks = 65;
-            Console.WriteLine($"{cherryTree.name} average height is {cherryTree.GetAverageHeight()}");
+            Console.WriteLine($"{cherryTree.Name} average height is {cherryTree.GetAverageHeight()}");
             cherryTree.PrintPlantInfo();
 
             var sequoiasTree = new Tree
             {
-                name = "Sequoia",
+                Name = "Sequoia",
                 Colour = "Light green",
-                barkColour = "medium brown",
-                hasBark = true,
-                bestPlantingMonth = "april",
+                BarkColour = "medium brown",
+                HasBark = true,
+                BestPlantingMonth = "april",
                 GrowingTimeInWeeks = 200,
                 MinHeight = 9,
                 MaxHeight = 300
             };
             sequoiasTree.PrintBarkInfo();
-            sequoiasTree.bestPlantingMonth = "may";
+            sequoiasTree.BestPlantingMonth = "may";
             sequoiasTree.PrintGrowInfo();
 
             Console.WriteLine("**********************************");

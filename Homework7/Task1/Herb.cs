@@ -2,8 +2,8 @@
 {
     public class Herb : Plant
     {
-        public string odor;
-        public string flavour;
+        public string Odor;
+        public string Flavour;
         private string _colour;
 
         public int MinWeight { get; set; }
@@ -15,12 +15,12 @@
 
         public override void PrintGrowInfo()
         {
-            Console.WriteLine($"Best planting month {bestPlantingMonth} and growing time in weeks {GrowingTimeInWeeks}");
+            Console.WriteLine($"Best planting month {BestPlantingMonth} and growing time in weeks {GrowingTimeInWeeks}");
         }
 
         public void PrintOdorAndFlavour()
         {
-            Console.WriteLine($"Odor is {odor} and flavour like {flavour}");
+            Console.WriteLine($"Odor is {Odor} and flavour like {Flavour}");
         }
 
         public int GetAverageWeight()

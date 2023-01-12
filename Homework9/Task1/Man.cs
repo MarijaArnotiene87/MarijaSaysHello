@@ -2,7 +2,7 @@
 {
     public class Man : Human
     {
-        public Man() : base("Mokka", "Cat")
+        public Man() : base("Gediminas", "Jaunikaitis")
         {
 
         }

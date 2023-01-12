@@ -19,5 +19,21 @@
         public T GetElementFromArray(int index) => array[index];
 
         public int GetArrayLength() => array.Length;
+
+        public void ToString()
+        {
+            foreach (var element in array)
+            {
+                Console.WriteLine(element.name);
+            }
+            if (typeof(T) == typeof(Man))
+            {
+                Console.WriteLine("There’re only men");
+            }
+            else
+            {
+                Console.WriteLine("There’re only women");
+            }
+        }
     }
 }

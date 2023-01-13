@@ -9,7 +9,14 @@ namespace Homework8
         {
             MassiveElement.ShowMassiveElement();
             var exceptionGenerator = new ExceptionGenerator();
-            exceptionGenerator.GenerateException();
+            try
+            {
+                exceptionGenerator.GenerateException();
+            }
+            catch
+            {
+                Console.WriteLine("Generate exception is working");
+            }
         }
     }
 }

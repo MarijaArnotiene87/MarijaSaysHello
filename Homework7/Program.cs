@@ -1,5 +1,6 @@
 ﻿using Homework7.Task1;
 using Homework7.Task2;
+using Homework7.Task3;
 
 namespace Homework7
 {

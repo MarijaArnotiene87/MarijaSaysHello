@@ -4,7 +4,7 @@
     {
         public double NumberOfPixelsInCamera { get; set; }
 
-        public new string Description { get => base.Description + $", number of pixels in camera: {NumberOfPixelsInCamera}"; }
+        public new string Description { get => $"{base.Description}, number of pixels in camera: {NumberOfPixelsInCamera}"; }
 
         public MobilePhone(double numberOfPixelsInCamera, string? modelName, decimal price) : base(modelName, price)
         {

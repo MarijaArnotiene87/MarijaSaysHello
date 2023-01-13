@@ -1,7 +1,5 @@
 ﻿using Homework10.LinkedList;
 using Homework10.List;
-using System.Collections.Generic;
-using System.Xml.Linq;
 
 namespace Homework10
 {
@@ -32,6 +30,35 @@ namespace Homework10
             var list1 = new LinkedList<int>(new[] { 1, 3, 4, 7, 12 });
             var list2 = new LinkedList<int>(new[] { 1, 5, 7, 9 });
             TaskLinkedList.MergeLinkedLists(list1, list2);
+
+            Queue<int> queue = new Queue<int>();
+            string userInput;
+            do
+            {
+                userInput = Console.ReadLine();
+                int userInputValue;
+
+                var isParsable = int.TryParse(userInput, out userInputValue);
+                if (isParsable)
+                {
+                    queue.Enqueue(userInputValue);
+                }
+            } while (!string.IsNullOrWhiteSpace(userInput));
+            TaskQueue.TaskQueue.Queue = queue;
+            TaskQueue.TaskQueue.GetMaxValue();
+            TaskQueue.TaskQueue.DeleteMaxValue();
+
+            Stack<string> stack = new Stack<string>();
+            stack.Push("a");
+            stack.Push("b");
+            stack.Push("c");
+
+            var stackCount = stack.Count();
+            for (int i = 0; i < stackCount; i++)
+            {
+                Console.WriteLine(stack.Pop());
+            }
         }
+
     }
 }

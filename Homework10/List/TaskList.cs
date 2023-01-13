@@ -12,6 +12,7 @@
                     sum += number;
                 }
             }
+
             Console.WriteLine(sum);
         }
 

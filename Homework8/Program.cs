@@ -13,9 +13,13 @@ namespace Homework8
             {
                 exceptionGenerator.GenerateException();
             }
-            catch
+            catch (CustomException ex)
             {
-                Console.WriteLine("Generate exception is working");
+                Console.WriteLine($"Generate exception is working {ex.Message}");
+            }
+            finally
+            {
+                Console.WriteLine("Done");
             }
         }
     }

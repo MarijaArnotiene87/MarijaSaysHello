@@ -1,15 +1,14 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace Homework10.TaskQueue
 {
     public static class TaskQueue
     {
-        public static Queue<int> Queue { get; set; } = new Queue<int>();
-
-        public static int GetMaxValue()
+        public static int GetMaxValue(Queue<int> queue)
         {
-            int maxValue = 0;
-            foreach (var item in Queue)
+            var maxValue = 0;
+            foreach (var item in queue)
             {
                 if (item > maxValue) maxValue = item;
             }
@@ -17,18 +16,18 @@ namespace Homework10.TaskQueue
             return maxValue;
         }
 
-        public static void DeleteMaxValue()
+        public static void DeleteMaxValue(Queue<int> queue)
         {
-            int maxValue = GetMaxValue();
+            var maxValue = GetMaxValue(queue);
             int item;
-            var success = Queue.TryDequeue(out item);
+            var success = queue.TryDequeue(out item);
             while (success)
             {
                 if (maxValue == item) break;
-                success = Queue.TryDequeue(out item);
+                success = queue.TryDequeue(out item);
             }
 
-            Console.WriteLine(GetMaxValue());
+            Console.WriteLine(GetMaxValue(queue));
         }
     }
 }

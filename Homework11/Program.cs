@@ -4,10 +4,14 @@
     {
         static void Main(string[] args)
         {
-            //Task1();
-            //Task2();
-            //Task3();
+            Task1();
+            Task2();
+            Task3();
             Task4();
+            Task5();
+            Task6();
+            Task7();
+            Task8();
         }
 
         public static void Task1()
@@ -66,6 +70,65 @@
             Console.WriteLine("The number and the Frequency are :");
             foreach (var item in groupedNumbers)
                 Console.WriteLine($"Number {item.Number} appears {item.Count} times");
+        }
+
+        public static void Task5()
+        {
+            string[] cities = { "ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
+
+            var filteredCities = from c in cities
+                                 where c.StartsWith("A") && c.EndsWith("M")
+                                 select c;
+
+            foreach (var city in filteredCities)
+                Console.WriteLine($"The city starting with A and ending with M is : {city}");
+        }
+
+        public static void Task6()
+        {
+            var numbers = new List<int>() { 5, 7, 13, 24, 6, 9, 8, 7 };
+
+            Console.WriteLine("How many records do you want to display ?");
+            var input = Console.ReadLine();
+
+            int numberOfRecords;
+            var isParsable = int.TryParse(input, out numberOfRecords);
+            if (!isParsable)
+            {
+                Console.WriteLine("Could not be parsed.");
+
+                return;
+            }
+
+            var topRecords = numbers.OrderByDescending(x => x).Take(numberOfRecords);
+
+            Console.Write($"The top {topRecords.Count()} records from the list are:");
+            foreach (var number in topRecords)
+                Console.Write($" {number}");
+            Console.WriteLine();
+        }
+
+        public static void Task7()
+        {
+            string[] cities = { "ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
+
+            var sortedCities = cities.OrderBy(x => x.Length);
+
+            Console.WriteLine($"Here is the arranged list : ");
+            foreach (var city in sortedCities)
+                Console.WriteLine($"{city}");
+            Console.WriteLine();
+        }
+
+        public static void Task8()
+        {
+            var elements = new List<string>() { "Biscuit", "Brade", "Butter", "Honey", "Brade", "Biscuit" };
+
+            var distinctElements = elements.Distinct().OrderBy(y => y);
+
+            foreach (var element in distinctElements)
+                Console.WriteLine($"{element}");
+            Console.WriteLine();
         }
     }
 }
